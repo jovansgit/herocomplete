@@ -8,7 +8,7 @@ var thor = require('./web-pages/thor.js')
 var hulk = require('./web-pages/hulk.js')
 var captain = require('./web-pages/captain.js')
 var vision = require('./web-pages/vision.js')
-var allAvengers = require('./web-pages/avengers.js')
+var Avengerspage = require('./web-pages/avengers.js')
 var Menu = require('./web-components/menu-component.js')
 var getAvengers = require('./web-components/avenger-component.js')
 router
@@ -19,7 +19,7 @@ router
 .on({
    'avengers': function() {
   document.getElementById('content').innerHTML =''
-     allAvengers()
+     Avengerspage()
    }, 
   'avengers/vision': function() {
   document.getElementById('content').innerHTML =''

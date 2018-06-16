@@ -1,0 +1,18 @@
+ class HeroProfile {
+    constructor(hero) {
+    this.name = hero.name,
+    this.description = hero.description, 
+    this.comics = hero.comics,  
+    this.series = hero.series
+ }
+
+   createProfile() {
+     return {
+       name: this.name,
+       description: this.description,
+       comics: this.comics,
+       series: this.series
+ }
+   }
+ }
+ module.exports = HeroProfile

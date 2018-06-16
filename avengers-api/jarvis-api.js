@@ -17,6 +17,14 @@ app.get("/", function(request,response){
    response.send(JSON.parse(avengers))
    })
 })
+
+app.get("//", function(request,response){
+  avengers.getHero(function(avengers){
+   response.send(JSON.parse(avengers))
+   })
+})
+
+
 app.listen("4000", function() {
 console.log("running on port 4000")
 })

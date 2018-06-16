@@ -1,16 +1,36 @@
-var createCard = require('./card-component')
-var getSpiderMan = function(options) {
-var req = new XMLHttpRequest()
+var createCard = require('./hero-component')
+var getHero = function(Hero, options) {
+  var req = new XMLHttpRequest()
 req.onreadystatechange = function() {
 if (this.readyState == 4 & this.status == 200){
-  if (options.name=='spider-man'){
-    createCard(JSON.parse(this.responseText))
-  }
-  else{}
-
-  }
+  if (Hero.name == 'Vision'){
+Hero = (JSON.parse(this.responseText));
+createCard(Hero[0]);
+console.log(Hero[0]);  
 }
-req.open('Get', 'http://jsimmons.tgb2.ninja:4000')
+else if(Hero.name == 'Hulk'){
+Hero = (JSON.parse(this.responseText));
+createCard(Hero[1]);
+console.log(Hero[1]);  
+}
+else if (Hero.name == 'Thor'){
+Hero = (JSON.parse(this.responseText));
+createCard(Hero[2]);
+console.log(Hero[2]);  
+}
+else if (Hero.name == 'Captain America'){
+Hero = (JSON.parse(this.responseText));
+createCard(Hero[3]);
+console.log(Hero[3]);  
+}
+else if (Hero.name == 'spider-man'){
+Hero = (JSON.parse(this.responseText));
+createCard(Hero[4]);
+console.log(Hero[4]);  
+}
+}
+}
+req.open('Get', 'http://jsimmons.tgb2.ninja:4000//')
 req.send()
 }
-module.exports = getSpiderMan
+module.exports = getHero

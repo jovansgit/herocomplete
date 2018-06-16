@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jovansgit/heroproject.git"
+    "url": "git+https://github.com/jovansgit/herocomplete.git"
   },
   "author": "Jovan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jovansgit/heroproject/issues"
+    "url": "https://github.com/jovansgit/herocomplete/issues"
   },
   "dependencies": {
     "colors": "^1.3.0",
